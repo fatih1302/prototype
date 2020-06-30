@@ -1,32 +1,49 @@
-# Prerequisites
-*.d
+#include<iostream>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+// ini adalah prototype function
 
-# Precompiled Headers
-*.gch
-*.pch
+void pengurangan ( int a, int b){
+	cout << (a - b);
+}
+void penjumlahan ( int x, int y){
+	cout << (x + y);
+}
+void perkalian ( int angka1, int angka2){
+	cout << (angka1 * angka2);
+}
+double pembagian ( double c, double d){
+	cout << (c / d);
+}
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int main (){
+	satu:
+	int pilih;
+	cout<<"Menu Aritmatika"<<endl;
+	cout<<"1. Pengurangan"<<endl;
+	cout<<"2. Penjumlahan"<<endl;
+	cout<<"3. Perkalian"<<endl;
+	cout<<"4. Pembagian"<<endl;
+	cout<<"Masukan pilihan :";cin>>pilih;
+	if (pilih == 1) {
+	cout<<"Pengurangan (10-15)"<<endl;
+	pengurangan (10,15);		
+	}
+	else if(pilih == 2) {
+	cout<<"Penjumlahan (20+25)"<<endl;
+	penjumlahan (20,25);		
+	}
+	else if(pilih == 3) {
+	cout<<"Perkalian (6x5)"<<endl;
+	perkalian (6,5);		
+	}
+	else if(pilih == 4) {
+	cout<<"Pembagian(18/5)"<<endl;
+	pembagian (18,5);		
+	}
+	else {
+		goto satu;
+		
+		cout<<"program diulang"<<endl;
+	}
+}
